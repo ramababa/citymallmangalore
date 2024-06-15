@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Fresh - Mangalore</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0.5rem;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            display: block;
+        }
+        .slideshow-container {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+        }
+        .slides {
+            display: none;
+        }
+        .slide img {
+            width: 100%;
+            height: auto;
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+        .dot-container {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+        }
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+        .active, .dot:hover {
+            background-color: #717171;
+        }
+        .featured-products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 2rem;
+        }
+        .product-card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 1rem;
+            padding: 1rem;
+            max-width: 200px;
+            text-align: center;
+            flex: 1 1 200px;
+        }
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+            }
+            .prev, .next {
+                font-size: 12px;
+                padding: 10px;
+            }
+            .dot-container {
+                padding: 10px;
+            }
+            .dot {
+                height: 10px;
+                width: 10px;
+            }
+            .product-card {
+                margin: 0.5rem;
+                padding: 0.5rem;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Amazon Fresh - Mangalore</h1>
+    <nav>
+        <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#"onclick ="alert('Amazon fresh - local market is not available in your Area,please change your location!')">Search Products and buy</a></li>
+  <li><a href="#" onclick="alert('Amazon fresh - local market is not available in your Area,please change your location!')">Our Products</a></li>
+        <li><a href="#" onclick="alert('Amazon fresh - local market is not available in your Area,please change your location!')">About</a></li>
+        <li><a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=508510" target="_blank">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="slideshow-container">
+    <div class="slides">
+        <div class="slide">
+            <img src="a.png" alt="Slide 1">
+        </div>
+    </div>
+<div class="slides">
+        <div class="slide">
+            <img src="x.png" alt="Slide 1">
+        </div>
+    </div>
+<div class="slides">
+        <div class="slide">
+            <img src="e.png" alt="Slide 1">
+        </div>
+    </div>
+<div class="slides">
+        <div class="slide">
+            <img src="sd.png" alt="Slide 1">
+        </div>
+    </div>
+<div class="slides">
+        <div class="slide">
+            <img src="d.png" alt="Slide 4">
+        </div>
+    </div>
+    <div class="slides">
+        <div class="slide">
+            <img src="b.png" alt="Slide 5">
+        </div>
+    </div>
+    <div class="slides">
+        <div class="slide">
+            <img src="v.png" alt="Slide 6">
+        </div>
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<div class="dot-container">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+</div>
+
+<div class="featured-products">
+    <div class="product-card" onclick="alert('Amazon fresh is not available in your location')">
+        <img src="eggs.jpg" alt="100% organic eggs">
+        <h3>100% organic eggs</h3>
+        <p>4 Rs per Pc</p>
+    </div>
+  <div class="product-card" onclick="alert('Amazon fresh is not available in your location')">
+        <img src="mash.jpg" alt="Product 2">
+        <h3>100% organic mashroom</h3>
+        <p>29 Rs per box</p>
+    </div>
+  <div class="product-card" onclick="alert('Amazon fresh is not available in your location')">
+        <img src="methi.jpg" alt="Product 3">
+        <h3>Organic local Methi Leaves</h3>
+        <p>7 Rs (250 grams)</p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Amazon Fresh Deralakatte. All rights reserved.</p>
+</footer>
+
+<script>
+    let slideIndex = 0;
+    let slideTimeout;
+    let userInteracted = false;
+    
+    showSlides();
+
+    function plusSlides(n) {
+        userInteracted = true;
+        slideIndex += n;
+        showSlides();
+    }
+
+    function currentSlide(n) {
+        userInteracted = true;
+        slideIndex = n - 1;
+        showSlides();
+    }
+
+    function showSlides() {
+        clearTimeout(slideTimeout);
+        let slides = document.getElementsByClassName("slides");
+        let dots = document.getElementsByClassName("dot");
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1;
+        }
+        for (let i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        
+        let delay = userInteracted ? 4000 : 5000; // 4 seconds if user interacted, otherwise 5 seconds
+        userInteracted = false;
+        
+        slideTimeout = setTimeout(showSlides, delay);
+    }
+</script>
+
+</body>
+</html>
